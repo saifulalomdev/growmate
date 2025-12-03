@@ -6,15 +6,15 @@ import Animated, {
   useAnimatedStyle,
   withSpring,
   interpolateColor,
-  runOnJS
 } from 'react-native-reanimated';
 import { useTheme } from '../store/use-theme';
 import { H2, P } from './Elements';
 import { trimText } from '../utils/trim-text';
+import { runOnJS } from 'react-native-worklets';
 
 export default function TaskCard(props: TaskCardProps) {
   const theme = useTheme(state => state.theme);
-  const [text, setText] = useState<string>('Completed');
+  const [text, setText] = useState<string>('');
   const translateX = useSharedValue(0);
 
   // Foreground card animation
@@ -27,7 +27,7 @@ export default function TaskCard(props: TaskCardProps) {
     backgroundColor: interpolateColor(
       translateX.value,
       [-150, 0],           // swipe left
-      [theme.primary, 'red'] // colors
+      ['red', theme.primary] // colors
     ),
   }));
 
@@ -65,11 +65,11 @@ export default function TaskCard(props: TaskCardProps) {
           style={[styles.cardBase, animatedStyle, { backgroundColor: theme.background }]}
         >
           <View>
-            <H2>{trimText(props.title || "Meet with mina", 18)}</H2>
+            <H2>{trimText(props.title || "I have to do it ", 18)}</H2>
             <P style={{ color: theme.muted, fontSize: 14 }}>
               {trimText(
                 props.description ||
-                "Meet Meet with mina this is kind djaskl fjaklsdfj laksdjfasljdf with mina this is kind djaskl fjaklsdfj laksdjfasljdf",
+                "Meet Meet with mina this is kind djaskl fjaklsdfj laksdjfasljdf with mina",
                 80
               )}
             </P>

@@ -26,7 +26,6 @@ export default function Search() {
                         paddingHorizontal: 16,
                         borderRadius: 24,
                         backgroundColor: theme.background,
-                        marginLeft: 10,
                         flex: 1,
                         color: theme.text,
                         height: 45,

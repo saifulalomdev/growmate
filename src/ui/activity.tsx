@@ -9,7 +9,7 @@ import TickMarkIcon from '@/assets/icons/tick-mark-icon'
 export default function Activity() {
 
     const theme = useTheme(state => state.theme);
-    const tasks: number = 3;
+    const tasks: number = 30;
     const taskStatus: string = "NO TASKS LEFT"
 
     return (
@@ -21,7 +21,7 @@ export default function Activity() {
                     </IconWrapper>
                     <P style={{ fontWeight: "bold" }}>Tasks</P>
                 </View>
-                <P style={{ fontWeight: "bold", fontSize: 14 }}>
+                <P style={{ fontWeight: "bold" }}>
                     {tasks}  {tasks === 1 ? "task" : "tasks"} completed
                 </P>
             </View>
