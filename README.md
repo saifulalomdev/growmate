@@ -2,6 +2,7 @@
 
 1. Start the container
 
+
    ```bash
    docker run -it --rm --network host -v "$(pwd)":/app -w /app node:22-alpine /bin/sh
    ```
