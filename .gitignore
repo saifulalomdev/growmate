@@ -10,6 +10,8 @@ web-build/
 expo-env.d.ts
 .vscode/
 
+git.diff
+
 # Native
 .kotlin/
 *.orig.*
