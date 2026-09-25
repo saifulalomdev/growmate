@@ -9,7 +9,7 @@ export default function Layout() {
                 options={tabOptions}
             />
             <Tabs.Screen
-                name='shops'
+                name='products'
                 options={tabOptions}
             />
             <Tabs.Screen
@@ -17,7 +17,7 @@ export default function Layout() {
                 options={tabOptions}
             />
             <Tabs.Screen
-                name='products'
+                name='shops'
                 options={tabOptions}
             />
             <Tabs.Screen
