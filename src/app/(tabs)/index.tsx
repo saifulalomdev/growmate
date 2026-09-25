@@ -23,7 +23,7 @@ export default function Index() {
         </View>
       </HeaderWrapper>
 
-      <Text className='text-white text-4xl p-6 uppercase'>
+      <Text className='text-text text-4xl p-6 uppercase'>
         this is comin form expo app styled with native wind
       </Text>
 

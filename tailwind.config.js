@@ -1,10 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // Add "./src/**/*.{js,jsx,ts,tsx}" to include your Expo Router app
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        surface: "var(--surface)",
+        accents: "var(--accents)",
+        card: "var(--card)",
+        muted: "var(--muted)",
+      },
+    },
   },
   plugins: [],
 };

@@ -1,26 +1,10 @@
-import { View, StyleSheet } from 'react-native'
-import React, { ReactNode } from 'react'
-import { useTheme } from '@/src/features/theme/theme-hooks'
+import { View } from 'react-native';
+import { ReactNode } from 'react';
 
 export default function HeaderWrapper({ children }: { children: ReactNode }) {
-
-    const theme = useTheme(state => state.theme);
-
-    return (
-        <View style={[styles.header, { backgroundColor: theme.surface, }]}>
-            {children}
-        </View>
-
-    )
+  return (
+    <View className="flex-row items-center justify-between h-[60px] px-5 gap-1.25">
+      {children}
+    </View>
+  );
 }
-
-export const styles = StyleSheet.create({
-    header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 20,
-        height: 60,
-        gap: 5
-    },
-})
