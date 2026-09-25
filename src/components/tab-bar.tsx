@@ -1,7 +1,7 @@
-import { View, StyleSheet } from 'react-native';
-import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import Tab from './tab';
+import type { BottomTabBarProps } from 'expo-router/build/react-navigation/bottom-tabs';
 import { useTheme } from '@/src/features/theme/theme-hooks';
+import { View, StyleSheet } from 'react-native';
+import Tab from './tab';
 
 export default function TabBar({ state, navigation }: BottomTabBarProps) {
 

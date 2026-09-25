@@ -1,11 +1,12 @@
-import React from 'react'
 import { ScreenWrapper } from '@/src/components/ui/screen-wrapper'
-import PlusIcon from '@/assets/icons/plus-icon'
 import HeaderWrapper from '@/src/components/header-wrapper'
 import IconWrapper from '@/src/components/ui/icon-wrapper'
 import { H2 } from '@/src/components/ui/elements'
+import { PlusIcon } from 'lucide-react-native'
+import { useTheme } from '@/src/features/theme/theme-hooks'
 
-export default function Clients() {
+export default function Products() {
+  const { theme: { text } } = useTheme()
   return (
     <ScreenWrapper>
 
@@ -13,7 +14,7 @@ export default function Clients() {
       <HeaderWrapper>
         <H2>Clients</H2>
         <IconWrapper>
-          <PlusIcon />
+          <PlusIcon color={text} />
         </IconWrapper>
       </HeaderWrapper>
 

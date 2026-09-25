@@ -9,8 +9,7 @@ import { useTheme } from '@/src/features/theme/theme-hooks';
 
 export default function Index() {
 
-  const { push } = useRouter();
-  const theme = useTheme()
+  const { theme: { text } } = useTheme()
 
 
   return (
@@ -19,10 +18,10 @@ export default function Index() {
         <H2>Settings</H2>
         <View style={{ flexDirection: "row", gap: 5 }}>
           <IconWrapper>
-            <SearchIcon color={theme.theme.text} />
+            <SearchIcon color={text} />
           </IconWrapper>
           <IconWrapper>
-            <CloudUpload color={theme.theme.text} />
+            <CloudUpload color={text} />
           </IconWrapper>
         </View>
       </HeaderWrapper>

@@ -13,7 +13,7 @@ export default function Layout() {
                 options={tabOptions}
             />
             <Tabs.Screen
-                name='tasks'
+                name='products'
                 options={tabOptions}
             />
             <Tabs.Screen

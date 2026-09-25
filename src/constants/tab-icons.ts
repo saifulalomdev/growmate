@@ -12,7 +12,7 @@ interface TabIcons {
 }
 
 export const tabIcons: TabIcons = {
-    "clients": { Icon: User },
+    "products": { Icon: User },
     "index": { Icon: Store },
     "settings": { Icon: Settings2 }
 }
