@@ -4,7 +4,7 @@ import HeaderWrapper from '@/src/components/header-wrapper';
 import { useTheme } from '@/src/features/theme/theme-hooks';
 import IconWrapper from '@/src/components/ui/icon-wrapper';
 import { H2 } from '@/src/components/ui/elements';
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 
 export default function Index() {
   const { theme: { text } } = useTheme()
@@ -23,6 +23,9 @@ export default function Index() {
         </View>
       </HeaderWrapper>
 
+      <Text className='text-white text-4xl p-6 uppercase'>
+        this is comin form expo app styled with native wind
+      </Text>
 
     </ScreenWrapper>
   )

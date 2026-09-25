@@ -4,6 +4,7 @@ import { useTheme } from "@/src/features/theme/theme-hooks";
 import { StatusBar } from "react-native";
 import { useFonts } from 'expo-font';
 import { Stack } from "expo-router";
+import "@/src/styles/global.css"
 
 
 export default function RootLayout() {
