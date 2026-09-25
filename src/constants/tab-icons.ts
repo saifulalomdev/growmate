@@ -1,20 +1,18 @@
-import HomeIcon from "@/assets/icons/home-icon"
-import NoteIcon from "@/assets/icons/note-icon"
-import SettingsIcon from "@/assets/icons/settings-icon"
-import UsersIcon from "@/assets/icons/users-icon"
-
-export const tabIcons: TabIcons = {
-    "index": { Icon: HomeIcon },
-    "clients": { Icon: UsersIcon },
-    "tasks": { Icon: NoteIcon },
-    "settings": { Icon: SettingsIcon }
-
-}
-
-interface Tab {
-    Icon: typeof HomeIcon
-}
+import {
+    Store,
+    Settings2,
+    User,
+    type LucideIcon
+} from 'lucide-react-native'
 
 interface TabIcons {
-    [key: string]: Tab
+    [key: string]: {
+        Icon: LucideIcon
+    }
+}
+
+export const tabIcons: TabIcons = {
+    "clients": { Icon: User },
+    "index": { Icon: Store },
+    "settings": { Icon: Settings2 }
 }
