@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { CartesianChart, Area, Line } from "victory-native";
-import { useTheme } from "../store/use-theme";
+import { useTheme } from "@/src/features/theme/theme-hooks";
 import { P } from "./Elements";
 import ActivityIcon from "@/assets/icons/activity-icon";
 import IconWrapper from "./icon-wrapper";

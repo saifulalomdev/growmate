@@ -1,7 +1,7 @@
 import React from 'react'
 import { IconProps } from './home-icon';
 import Svg, { Path } from 'react-native-svg'
-import { useTheme } from '@/src/store/use-theme';
+import { useTheme } from '@/src/features/theme/theme-hooks';
 
 export default function SunIcon({ color }: IconProps): React.ReactElement {
 

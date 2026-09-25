@@ -7,7 +7,7 @@ import Animated, {
   withSpring,
   interpolateColor,
 } from 'react-native-reanimated';
-import { useTheme } from '../store/use-theme';
+import { useTheme } from '@/src/features/theme/theme-hooks';
 import { H2, P } from './Elements';
 import { trimText } from '../utils/trim-text';
 import { runOnJS } from 'react-native-worklets';

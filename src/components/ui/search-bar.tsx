@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput, View } from 'react-native'
 import React from 'react'
 import SearchIcon from '@/assets/icons/search-icon'
-import { useTheme } from '../store/use-theme'
+import { useTheme } from '@/src/features/theme/theme-hooks'
 
 export default function SearchBar() {
   const theme = useTheme(state => state.theme)

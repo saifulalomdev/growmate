@@ -1,7 +1,7 @@
 import React from 'react';
 import Svg, { Path, SvgWithCss } from 'react-native-svg'
 import { IconProps } from './home-icon';
-import { useTheme } from '@/src/store/use-theme';
+import { useTheme } from '@/src/features/theme/theme-hooks';
 
 export default function MoonIcon({ color }: IconProps) {
     const theme = useTheme(state => state.theme)

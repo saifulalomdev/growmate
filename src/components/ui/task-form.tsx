@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet, KeyboardAvoidingView, ScrollView, Platform } from 'react-native'
 import Input from './input'
 import Textarea from './textarea'
-import { useTheme } from '../store/use-theme'
+import { useTheme } from '@/src/features/theme/theme-hooks'
 
 export default function TaskForm() {
     const theme = useTheme(state => state.theme)

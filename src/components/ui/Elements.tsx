@@ -1,6 +1,6 @@
 import { Text, TextProps } from 'react-native'
 import React, { ReactElement } from 'react'
-import { useTheme } from '../store/use-theme'
+import { useTheme } from '@/src/features/theme/theme-hooks'
 
 export function H1({ children, style, ...Props }: TextProps): ReactElement {
 

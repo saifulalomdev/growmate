@@ -4,10 +4,10 @@ import SettingsIcon from "@/assets/icons/settings-icon"
 import UsersIcon from "@/assets/icons/users-icon"
 
 export const tabIcons: TabIcons = {
-    "index": {Icon : HomeIcon},
-    "clients": {Icon: UsersIcon},
-    "tasks": { Icon: NoteIcon},
-    "settings": {Icon: SettingsIcon}
+    "index": { Icon: HomeIcon },
+    "clients": { Icon: UsersIcon },
+    "tasks": { Icon: NoteIcon },
+    "settings": { Icon: SettingsIcon }
 
 }
 

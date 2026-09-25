@@ -1,6 +1,6 @@
 import { View, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
-import { useTheme } from '../store/use-theme'
+import { useTheme } from '@/src/features/theme/theme-hooks'
 import { H2, P } from './Elements'
 import IconWrapper from './icon-wrapper'
 import NoteIcon from '@/assets/icons/note-icon'

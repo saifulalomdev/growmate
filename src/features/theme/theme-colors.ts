@@ -1,4 +1,3 @@
-// theme/colors.js
 export const darkTheme: ColorTheme = {
   name: "dark",
   primary: '#1B2A32',

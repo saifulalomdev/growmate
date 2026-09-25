@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native'
 import React from 'react'
 import OverviewCard from './overview-card'
-import { useTheme } from '../store/use-theme'
+import { useTheme } from '@/src/features/theme/theme-hooks'
 import UsersIcon from '@/assets/icons/users-icon'
 import UserTickMarkIcon from '@/assets/icons/user-tick-mark-icon'
 import UserSoundIcon from '@/assets/icons/user-sound-icon'

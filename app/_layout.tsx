@@ -1,6 +1,6 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useTheme } from "@/src/store/use-theme";
+import { useTheme } from "@/src/features/theme/theme-hooks";
 import { StatusBar } from "react-native";
 import { useFonts } from 'expo-font';
 import { Stack } from "expo-router";

@@ -2,7 +2,7 @@ import React from 'react'
 import Svg, { Path } from 'react-native-svg'
 import { IconProps } from './home-icon'
 import { colors } from '@/src/theme/colors'
-import { useTheme } from '@/src/store/use-theme'
+import { useTheme } from '@/src/features/theme/theme-hooks'
 
 export default function SearchIcon({ color }: IconProps) {
 

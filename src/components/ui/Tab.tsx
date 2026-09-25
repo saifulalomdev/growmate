@@ -1,6 +1,6 @@
 import { TouchableOpacity, StyleSheet } from 'react-native'
-import { tabIcons } from '../constants/tab-icons';
-import { useTheme } from '../store/use-theme';
+import { useTheme } from '@/src/features/theme/theme-hooks';
+import { tabIcons } from '@/src/constants/tab-icons';
 
 export default function Tab({ isFocusd, onPress, routeName }: TabProps) {
 

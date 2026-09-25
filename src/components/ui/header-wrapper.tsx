@@ -1,6 +1,6 @@
 import { View, StyleSheet } from 'react-native'
 import React, { ReactNode } from 'react'
-import { useTheme } from '../store/use-theme'
+import { useTheme } from '@/src/features/theme/theme-hooks'
 
 export default function HeaderWrapper({ children }: { children: ReactNode }) {
 

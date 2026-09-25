@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Pressable, StyleSheet, PressableProps, StyleProp, ViewStyle } from 'react-native';
-import { useTheme } from '../store/use-theme';
+import { useTheme } from '@/src/features/theme/theme-hooks';
 
 
 export default function IconWrapper({ children, isFeedback = true, style, ...props }: IconWrapperProps) {
