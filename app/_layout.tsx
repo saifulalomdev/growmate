@@ -1,9 +1,9 @@
-import { Stack } from "expo-router";
-import { StatusBar } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { useFonts } from 'expo-font';
-import { useTheme } from "@/src/store/use-theme";
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useTheme } from "@/src/store/use-theme";
+import { StatusBar } from "react-native";
+import { useFonts } from 'expo-font';
+import { Stack } from "expo-router";
 
 
 export default function RootLayout() {

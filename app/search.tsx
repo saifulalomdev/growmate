@@ -1,11 +1,11 @@
-import { TextInput } from 'react-native'
-import React from 'react'
+import LeftArrowIcon from '@/assets/icons/left-arrow-icon'
 import ScreenWrapper from '@/src/ui/screen-wrapper'
 import HeaderWrapper from '@/src/ui/header-wrapper'
 import IconWrapper from '@/src/ui/icon-wrapper'
-import LeftArrowIcon from '@/assets/icons/left-arrow-icon'
-import { useRouter } from 'expo-router'
 import { useTheme } from '@/src/store/use-theme'
+import { TextInput } from 'react-native'
+import { useRouter } from 'expo-router'
+import React from 'react'
 
 export default function Search() {
     const theme = useTheme(state => state.theme)
