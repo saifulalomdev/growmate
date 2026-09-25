@@ -1,6 +1,6 @@
 import { View, StyleSheet } from 'react-native';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import Tab from './Tab';
+import Tab from './tab';
 import { useTheme } from '@/src/features/theme/theme-hooks';
 
 export default function TabBar({ state, navigation }: BottomTabBarProps) {

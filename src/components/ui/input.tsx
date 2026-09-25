@@ -2,7 +2,7 @@ import { View, StyleSheet, TextInputProps } from 'react-native'
 import React, { useState } from 'react'
 import { TextInput } from 'react-native-gesture-handler'
 import { useTheme } from '@/src/features/theme/theme-hooks'
-import { P } from './Elements';
+import { P } from './elements';
 
 export default function Input({ label, autoFocus, style, ...props }: InputProps) {
 

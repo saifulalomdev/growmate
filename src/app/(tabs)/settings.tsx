@@ -1,10 +1,10 @@
 import { ScreenWrapper } from '@/src/components/ui/screen-wrapper'
 import MoonIcon from '@/assets/icons/moon-icon'
-import HeaderWrapper from '@/src/components/ui/header-wrapper'
+import HeaderWrapper from '@/src/components/header-wrapper'
 import IconWrapper from '@/src/components/ui/icon-wrapper'
 import { useTheme } from '@/src/features/theme/theme-hooks'
 import SunIcon from '@/assets/icons/sun-icon'
-import { H2 } from '@/src/components/ui/Elements'
+import { H2 } from '@/src/components/ui/elements'
 
 export default function Settings() {
 

@@ -1,6 +1,6 @@
 import LeftArrowIcon from '@/assets/icons/left-arrow-icon'
 import { ScreenWrapper } from '@/src/components/ui/screen-wrapper'
-import HeaderWrapper from '@/src/components/ui/header-wrapper'
+import HeaderWrapper from '@/src/components/header-wrapper'
 import IconWrapper from '@/src/components/ui/icon-wrapper'
 import { useTheme } from '@/src/features/theme/theme-hooks'
 import { TextInput } from 'react-native'
