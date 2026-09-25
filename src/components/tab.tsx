@@ -1,6 +1,7 @@
-import { TouchableOpacity, StyleSheet } from 'react-native'
+import { TouchableOpacity, StyleSheet } from 'react-native';
 import { useTheme } from '@/src/features/theme/theme-hooks';
 import { tabIcons } from '@/src/constants/tab-icons';
+import { Text } from 'react-native'
 
 export default function Tab({ isFocusd, onPress, routeName }: TabProps) {
 
@@ -10,14 +11,17 @@ export default function Tab({ isFocusd, onPress, routeName }: TabProps) {
 
     // access icon properties from tabicons object 
     // with routename as key
-    const { Icon } = tabIcons[routeName]
+    const { Icon, label } = tabIcons[routeName]
 
     return (
         <TouchableOpacity
             onPress={onPress}
-            style={[styles.tab, { borderColor : backgroundColor }]}
+            style={[styles.tab, { borderColor: backgroundColor }]}
         >
             <Icon color={iconColor} />
+            <Text style={{ color: iconColor, fontSize: 12 }}>
+                {label}
+            </Text>
         </TouchableOpacity>
     )
 }
@@ -29,8 +33,8 @@ const styles = StyleSheet.create({
         borderTopWidth: 2,
         justifyContent: "center",
         alignItems: "center",
-        // paddingBottom : 16,
-        // paddingTop : 8,
+        paddingBottom : 16,
+        paddingTop : 12,
     }
 })
 

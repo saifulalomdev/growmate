@@ -2,17 +2,25 @@ import {
     Store,
     Settings2,
     User,
+    ShoppingBag,
+    HomeIcon,
+    Package,
     type LucideIcon
 } from 'lucide-react-native'
 
+interface TabIconConfig {
+    Icon: LucideIcon;
+    label: string; // Added custom label property
+}
+
 interface TabIcons {
-    [key: string]: {
-        Icon: LucideIcon
-    }
+    [key: string]: TabIconConfig;
 }
 
 export const tabIcons: TabIcons = {
-    "products": { Icon: User },
-    "index": { Icon: Store },
-    "settings": { Icon: Settings2 }
+    "index": { Icon: HomeIcon, label: "Home" },
+    "products": { Icon: Package, label: "Products" },
+    "orders": { Icon: ShoppingBag, label: "Orders" },
+    "shops": { Icon: Store, label: "Shops" },
+    "settings": { Icon: Settings2, label: "Settings" },
 }
