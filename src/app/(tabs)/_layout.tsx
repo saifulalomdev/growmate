@@ -9,10 +9,6 @@ export default function Layout() {
                 options={tabOptions}
             />
             <Tabs.Screen
-                name='clients'
-                options={tabOptions}
-            />
-            <Tabs.Screen
                 name='products'
                 options={tabOptions}
             />

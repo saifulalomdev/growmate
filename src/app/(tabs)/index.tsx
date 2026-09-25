@@ -15,7 +15,7 @@ export default function Index() {
   return (
     <ScreenWrapper>
       <HeaderWrapper>
-        <H2>Settings</H2>
+        <H2>Shops</H2>
         <View style={{ flexDirection: "row", gap: 5 }}>
           <IconWrapper>
             <SearchIcon color={text} />

@@ -12,7 +12,7 @@ export default function Products() {
 
       {/* screen header */}
       <HeaderWrapper>
-        <H2>Clients</H2>
+        <H2>Products</H2>
         <IconWrapper>
           <PlusIcon color={text} />
         </IconWrapper>
