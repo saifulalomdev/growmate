@@ -4,11 +4,9 @@ import { useRouter } from 'expo-router'
 import { ScreenWrapper } from '@/src/components/ui/screen-wrapper'
 import HeaderWrapper from '@/src/components/header-wrapper'
 import { H2 } from '@/src/components/ui/elements'
-import { useTheme } from '@/src/features/theme/theme-hooks'
 
 export default function SignUpScreen() {
   const router = useRouter()
-  const { theme: { text } } = useTheme()
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -25,9 +23,9 @@ export default function SignUpScreen() {
 
       <View style={styles.container}>
         <View style={styles.inputGroup}>
-          <Text style={[styles.label, { color: text }]}>Full Name</Text>
+          <Text style={[styles.label]}>Full Name</Text>
           <TextInput
-            style={[styles.input, { color: text, borderColor: text }]}
+            style={[styles.input]}
             placeholder="Enter your name"
             placeholderTextColor="#888"
             value={name}
@@ -36,9 +34,9 @@ export default function SignUpScreen() {
         </View>
 
         <View style={styles.inputGroup}>
-          <Text style={[styles.label, { color: text }]}>Email</Text>
+          <Text style={[styles.label]}>Email</Text>
           <TextInput
-            style={[styles.input, { color: text, borderColor: text }]}
+            style={[styles.input]}
             placeholder="Enter your email"
             placeholderTextColor="#888"
             value={email}
@@ -49,9 +47,9 @@ export default function SignUpScreen() {
         </View>
 
         <View style={styles.inputGroup}>
-          <Text style={[styles.label, { color: text }]}>Password</Text>
+          <Text style={[styles.label]}>Password</Text>
           <TextInput
-            style={[styles.input, { color: text, borderColor: text }]}
+            style={[styles.input]}
             placeholder="Create a password"
             placeholderTextColor="#888"
             value={password}
@@ -68,7 +66,7 @@ export default function SignUpScreen() {
           style={styles.linkContainer} 
           onPress={() => router.push('/(auth)/sign-in')}
         >
-          <Text style={[styles.linkText, { color: text }]}>
+          <Text style={[styles.linkText]}>
             Already have an account? <Text style={styles.boldText}>Sign In</Text>
           </Text>
         </TouchableOpacity>

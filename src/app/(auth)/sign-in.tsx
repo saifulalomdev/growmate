@@ -4,11 +4,9 @@ import { useRouter } from 'expo-router'
 import { ScreenWrapper } from '@/src/components/ui/screen-wrapper'
 import HeaderWrapper from '@/src/components/header-wrapper'
 import { H2 } from '@/src/components/ui/elements'
-import { useTheme } from '@/src/features/theme/theme-hooks'
 
 export default function SignInScreen() {
   const router = useRouter()
-  const { theme: { text } } = useTheme()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -25,9 +23,9 @@ export default function SignInScreen() {
 
       <View style={styles.container}>
         <View style={styles.inputGroup}>
-          <Text style={[styles.label, { color: text }]}>Email</Text>
+          <Text style={[styles.label]}>Email</Text>
           <TextInput
-            style={[styles.input, { color: text, borderColor: text }]}
+            style={[styles.input]}
             placeholder="Enter your email"
             placeholderTextColor="#888"
             value={email}
@@ -38,9 +36,9 @@ export default function SignInScreen() {
         </View>
 
         <View style={styles.inputGroup}>
-          <Text style={[styles.label, { color: text }]}>Password</Text>
+          <Text style={[styles.label]}>Password</Text>
           <TextInput
-            style={[styles.input, { color: text, borderColor: text }]}
+            style={[styles.input]}
             placeholder="Enter your password"
             placeholderTextColor="#888"
             value={password}
@@ -57,7 +55,7 @@ export default function SignInScreen() {
           style={styles.linkContainer} 
           onPress={() => router.push('/(auth)/sign-up')}
         >
-          <Text style={[styles.linkText, { color: text }]}>
+          <Text style={[styles.linkText]}>
             Don't have an account? <Text style={styles.boldText}>Sign Up</Text>
           </Text>
         </TouchableOpacity>

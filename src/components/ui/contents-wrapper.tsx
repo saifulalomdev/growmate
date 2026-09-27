@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 
 export default function ContentsWrapper({ children }: { children?: ReactNode }) {

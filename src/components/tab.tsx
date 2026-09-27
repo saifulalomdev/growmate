@@ -1,46 +1,33 @@
-import { TouchableOpacity, StyleSheet } from 'react-native';
-import { useTheme } from '@/src/features/theme/theme-hooks';
+import { Pressable, Text } from 'react-native';
 import { tabIcons } from '@/src/constants/tab-icons';
-import { Text } from 'react-native'
-
-export default function Tab({ isFocusd, onPress, routeName }: TabProps) {
-
-    const theme = useTheme(state => state.theme);
-    const backgroundColor = isFocusd ? theme.text : "transparent";
-    const iconColor = isFocusd ? theme.foreground : theme.muted;
-
-    // access icon properties from tabicons object 
-    // with routename as key
-    const { Icon, label } = tabIcons[routeName]
-
-    return (
-        <TouchableOpacity
-            onPress={onPress}
-            style={[styles.tab, { borderColor: backgroundColor }]}
-        >
-            <Icon color={iconColor} />
-            <Text style={{ color: iconColor, fontSize: 12 }}>
-                {label}
-            </Text>
-        </TouchableOpacity>
-    )
-}
-
-const styles = StyleSheet.create({
-    tab: {
-        width: 60,
-        height: 60,
-        borderTopWidth: 2,
-        justifyContent: "center",
-        alignItems: "center",
-        paddingBottom : 16,
-        paddingTop : 12,
-    }
-})
+import { cn } from '@/src/utils/cn';
 
 interface TabProps {
-    isFocusd: boolean,
-    routeName: string,
-    onPress: () => void,
+  isFocusd: boolean;
+  routeName: string;
+  onPress: () => void;
+}
 
+export default function Tab({ isFocusd, onPress, routeName }: TabProps) {
+  const { Icon, label } = tabIcons[routeName];
+
+  return (
+    <Pressable
+      onPress={onPress}
+      className={cn(
+        'w-[60px] h-[60px] items-center justify-center pt-3 pb-4 border-t-2',
+        isFocusd ? 'border-foreground' : 'border-transparent'
+      )}
+    >
+      <Icon className={isFocusd ? 'text-foreground' : 'text-muted'} size={20} />
+      <Text
+        className={cn(
+          'text-xs font-medium mt-1',
+          isFocusd ? 'text-foreground font-semibold' : 'text-muted'
+        )}
+      >
+        {label}
+      </Text>
+    </Pressable>
+  );
 }

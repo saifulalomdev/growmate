@@ -1,17 +1,14 @@
 import { View, StyleSheet, TextInputProps } from 'react-native'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { TextInput } from 'react-native-gesture-handler'
-import { useTheme } from '@/src/features/theme/theme-hooks'
 import { P } from './elements';
 
 export default function Input({ label, autoFocus, style, ...props }: InputProps) {
 
     const [isFocused, setIsFocused] = useState(false);
-    const theme = useTheme(state => state.theme);
 
     return (
         <View style={[styles.container, {
-            borderColor: isFocused ? theme.secondary : "transparent",
         }]}>
 
             <TextInput
@@ -19,13 +16,11 @@ export default function Input({ label, autoFocus, style, ...props }: InputProps)
                 autoFocus={autoFocus}
                 style={[styles.input, style,
                 {
-                    backgroundColor: theme.background,
-                    color: theme.text,
                 }]}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
             />
-            <P style={[styles.label, { backgroundColor: theme.background }]}>
+            <P style={[styles.label]}>
                 {label}
             </P>
         </View>

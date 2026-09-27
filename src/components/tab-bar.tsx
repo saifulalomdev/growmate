@@ -1,40 +1,24 @@
 import type { BottomTabBarProps } from 'expo-router/build/react-navigation/bottom-tabs';
-import { useTheme } from '@/src/features/theme/theme-hooks';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import Tab from './tab';
 
 export default function TabBar({ state, navigation }: BottomTabBarProps) {
+  const routes = state.routeNames;
 
-    const theme = useTheme(state => state.theme);
-    const routes = state.routeNames;
-
-    return (
-        <View style={[styles.tabBar, { backgroundColor: theme.background }]}>
-            {routes.map((routeName, i) => {
-                const isFocused = state.index === i;
-                return (
-                    <Tab
-                        key={i}
-                        onPress={() => navigation.navigate(routeName)}
-                        routeName={routeName}
-                        isFocusd={isFocused}
-                    />
-                )
-            })}
-        </View>
-    )
+  return (
+    <View className="absolute bottom-0 left-0 right-0 flex-row items-center justify-between px-5 bg-background">
+      {routes.map((routeName, i) => {
+        const isFocused = state.index === i;
+        
+        return (
+          <Tab
+            key={routeName}
+            onPress={() => navigation.navigate(routeName)}
+            routeName={routeName}
+            isFocusd={isFocused}
+          />
+        );
+      })}
+    </View>
+  );
 }
-
-const styles = StyleSheet.create({
-    tabBar: {
-        position: "absolute",
-        bottom: 0,
-        alignSelf: "center",
-        flex: 1,
-        flexDirection: "row",
-        justifyContent: "space-between",
-        left: 0,
-        right: 0,
-        paddingHorizontal: 20,
-    }
-})
